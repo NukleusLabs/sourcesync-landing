@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SourceSync – The Future of Procurement is Here</title>
+  <meta name="description" content="Send RFQs via WhatsApp. Suppliers quote in 30 seconds. Compare instantly. Win faster."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            primary: '#6366f1',
+            electric: '#a78bfa',
+            dark: '#0f172a',
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'blob': 'blob 12s infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            blob: {
+              '0%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' },
+              '50%': { borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%' },
+              '100%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass { backdrop-filter: blur(16px); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); }
+    .gradient-hero { background: linear-gradient(135deg, #4338ca 0%, #7c3aed 30%, #ec4899 70%, #f43f5e 100%); }
+    .tilt-card { transition: transform 0.4s ease; }
+    .tilt-card:hover { transform: translateY(-16px) rotateX(4deg) rotateY(4deg); }
+    .gradient-text { background-clip: text; -webkit-background-clip: text; color: transparent; }
+  </style>
+</head>
+<body class="bg-dark text-white overflow-x-hidden">
+
+  <!-- Floating Background Blobs -->
+  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div class="absolute top-0 left-10 w-96 h-96 bg-electric/30 rounded-full blur-3xl animate-blob"></div>
+    <div class="absolute bottom-0 right-20 w-80 h-80 bg-pink-500/30 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+    <div class="absolute top-1/3 -left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-blob animation-delay-8000"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 z-50 w-full border-b border-white/10 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="text-3xl font-black bg-gradient-to-r from-white to-electric gradient-text">SourceSync</div>
+      <div class="hidden lg:flex items-center gap-10">
+        <a href="#features" class="hover:text-electric transition">Features</a>
+        <a href="#how" class="hover:text-electric transition">How it Works</a>
+        <a href="#pricing" class="hover:text-electric transition">Pricing</a>
+        <a href="/login" class="hover:text-electric transition">Login</a>
+        <a href="#cta" class="bg-white text-dark hover:bg-gray-100 px-7 py-3.5 rounded-full font-bold shadow-xl transition">Start Free</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero – Cinematic -->
+  <section class="min-h-screen flex items-center relative pt-20">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-float">
+        <h1 class="text-6xl md:text-7xl lg:text-8xl font-black leading-tight">
+          Procurement<br/>
+          <span class="bg-gradient-to-r from-electric to-pink-400 gradient-text">Reinvented</span>
+        </h1>
+        <p class="mt-8 text-xl md:text-2xl opacity-90 max-w-xl">
+          Send RFQs via WhatsApp. Suppliers quote in 30 seconds. You pick the winner instantly.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-6">
+          <a href="#cta" class="bg-white text-dark px-10 py-5 rounded-2xl text-xl font-bold shadow-2xl hover:shadow-electric/50 transition hover:scale-105">
+            Start Free – 14 Days Pro Trial
+          </a>
+          <a href="#demo" class="glass px-10 py-5 rounded-2xl text-xl font-bold flex items-center gap-3 hover:scale-105 transition">
+            <i class="fas fa-play-circle text-2xl"></i> Watch 45s Demo
+          </a>
+        </div>
+        <div class="mt-16 flex items-center gap-12 text-sm opacity-70">
+          <div class="flex -space-x-3">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full border-4 border-dark" alt=""/>
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full border-4 border-dark" alt=""/>
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-12 h-12 rounded-full border-4 border-dark" alt=""/>
+            <div class="w-12 h-12 rounded-full bg-electric/20 backdrop-blur flex items-center justify-center font-bold">+2k</div>
+          </div>
+          <p>Used by 2,000+ procurement heroes worldwide</p>
+        </div>
+      </div>
+
+      <!-- 3D Floating Dashboard Mockup -->
+      <div class="relative perspective-1000">
+        <div class="tilt-card relative transform-gpu rotate-3 hover:rotate-0 transition-all duration-700">
+          <img src="https://images.unsplash.com/photo-1558655146-9f40138ed1cb?w=1200&h=900&fit=crop&blur=10" 
+               class="rounded-3xl shadow-2xl border border-white/20" alt="SourceSync dashboard"/>
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-t from-dark/80 via-transparent to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-8 left-8 right-8 glass p-6 rounded-2xl">
+            <div class="flex justify-between items-center">
+              <div>
+                <p class="text-3xl font-black">$184,220 saved this month</p>
+                <p class="opacity-80">Across all active enquiries</p>
+              </div>
+              <i class="fas fa-trophy text-5xl text-yellow-400 animate-pulse"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features – Grid with 3D Cards -->
+  <section id="features" class="py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl md:text-7xl font-black">Built for Speed & Smarts</h2>
+        <p class="mt-6 text-2xl opacity-80">Everything you asked for. Nothing you don’t.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Repeat this card with different colors/icons -->
+        <div class="glass tilt-card p-10 rounded-3xl border border-white/20 hover:border-electric/50 transition-all group">
+          <div class="w-20 h-20 bg-gradient-to-br from-electric to-purple-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+            <i class="fab fa-whatsapp text-4xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-4">WhatsApp Blaster</h3>
+          <p class="text-lg opacity-80">Send rich RFQs to 100 suppliers in one click. Attachments, deadlines, specs – all inside WhatsApp.</p>
+        </div>
+
+        <div class="glass tilt-card p-10 rounded-3xl border border-white/20 hover:border-pink-500/50 transition-all group">
+          <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-red-500 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+            <i class="fas fa-link text-4xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-4">Zero-Friction Quoting</h3>
+          <p class="text-lg opacity-80">Suppliers open your custom link → quote in 30 seconds. No signup, no app, no excuses.</p>
+        </div>
+
+        <div class="glass tilt-card p-10 rounded-3xl border border-white/20 hover:border-cyan-400/50 transition-all group">
+          <div class="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+            <i class="fas fa-table text-4xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-4">Live Comparison Matrix</h3>
+          <p class="text-lg opacity-80">Auto-highlight best price, fastest lead time, landed cost. Pick winner → send PO instantly.</p>
+        </div>
+
+        <!-- Coming Soon Cards (with badge) -->
+        <div class="glass tilt-card p-10 rounded-3xl border border-white/20 hover:border-yellow-400/50 transition-all group relative overflow-hidden">
+          <span class="absolute top-4 right-4 bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold animate-pulse">Q1 2026</span>
+          <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition">
+            <i class="fas fa-robot text-4xl"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-4">AI Quote Copilot</h3>
+          <p class="text-lg opacity-80">Detects anomalies, suggests counter-offers, predicts delays before they happen.</p>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- How it Works – Animated Steps -->
+  <section id="how" class="py-32 bg-gradient-to-b from-transparent via-electric/10 to-transparent">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-5xl md:text-7xl font-black mb-20">It’s Literally This Simple</h2>
+      <div class="grid lg:grid-cols-3 gap-16">
+        <div class="group">
+          <div class="text-9xl font-black opacity-10 mb-8">01</div>
+          <div class="w-28 h-28 mx-auto bg-gradient-to-br from-electric to-purple-600 rounded-full flex items-center justify-center text-5xl mb-8 shadow-2xl group-hover:scale-110 transition">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-4">Blast via WhatsApp</h3>
+          <p class="text-xl opacity-80">One click → beautiful RFQ lands in suppliers’ WhatsApp</p>
+        </div>
+        <div class="group">
+          <div class="text-9xl font-black opacity-10 mb-8">02</div>
+          <div class="w-28 h-28 mx-auto bg-gradient-to-br from-pink-500 to-red-500 rounded-full flex items-center justify-center text-5xl mb-8 shadow-2xl group-hover:scale-110 transition">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-4">They Quote Instantly</h3>
+          <p class="text-xl opacity-80">Tap link → fill price & terms → submit. Done.</p>
+        </div>
+        <div class="group">
+          <div class="text-9xl font-black opacity-10 mb-8">03</div>
+          <div class="w-28 h-28 mx-auto bg-gradient-to-br from-cyan-400 to-emerald-500 rounded-full flex items-center justify-center text-5xl mb-8 shadow-2xl group-hover:scale-110 transition">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-4">You Pick the Winner</h3>
+          <p class="text-xl opacity-80">Smart table highlights best deal → award PO in 1 click</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA – Full Bleed -->
+  <section id="cta" class="py-40 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-electric via-purple-600 to-pink-600"></div>
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+    <div class="relative max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-6xl md:text-8xl font-black mb-8">Stop Wasting Time.<br/>Start Winning Deals.</h2>
+      <p class="text-2xl mb-12 opacity-90">Join 2,000+ buyers closing faster with SourceSync</p>
+      <div class="flex flex-col sm:flex-row gap-6 max-w-lg mx-auto">
+        <input type="email" placeholder="you@company.com" class="px-8 py-6 rounded-2xl text-dark text-lg"/>
+        <button class="bg-white text-dark px-10 py-6 rounded-2xl text-xl font-bold hover:scale-105 transition shadow-2xl">
+          Claim My Free Trial
+        </button>
+      </div>
+      <p class="mt-6 text-lg opacity-80">No credit card · Full Pro features for 14 days · Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/50 backdrop-blur border-t border-white/10 py-16">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="text-4xl font-black bg-gradient-to-r from-electric to-pink-400 gradient-text mb-8">SourceSync</div>
+      <p class="text-lg opacity-70">© 2025 SourceSync. Procurement, finally fun.</p>
+    </div>
+  </footer>
+
+  <!-- Lightweight tilt script for cards (optional but cool) -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+      max: 10,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.3,
+    });
+  </script>
+</body>
+</html>

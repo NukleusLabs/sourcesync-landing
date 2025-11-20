@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SourceSync - Streamline Your Procurement Process</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        light: '#eff6ff',
+                        dark: '#1e3a8a'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="bg-primary w-8 h-8 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">SS</span>
+                        </div>
+                        <span class="ml-2 text-xl font-bold text-gray-900">SourceSync</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-primary font-medium">Features</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-primary font-medium">How It Works</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary font-medium">Pricing</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">Get Started</button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#features" class="block px-3 py-2 text-gray-700 hover:text-primary">Features</a>
+                <a href="#how-it-works" class="block px-3 py-2 text-gray-700 hover:text-primary">How It Works</a>
+                <a href="#pricing" class="block px-3 py-2 text-gray-700 hover:text-primary">Pricing</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+                <button class="w-full text-left bg-primary text-white px-3 py-2 rounded-lg mt-2">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                        Streamline Your <span class="text-accent">Procurement Process</span> with SourceSync
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8">
+                        Connect with suppliers instantly via WhatsApp, manage quotations effortlessly, and make smarter purchasing decisions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                            Start Free Trial
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-colors">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                        <div class="bg-gray-800 rounded-xl p-4">
+                            <div class="flex items-center mb-4">
+                                <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-blue-600 text-white p-3 rounded-lg max-w-xs ml-auto">
+                                    Looking for quotes on office supplies?
+                                </div>
+                                <div class="bg-gray-700 text-white p-3 rounded-lg max-w-xs">
+                                    Yes! Need quotes for 100 ergonomic chairs by next week.
+                                </div>
+                                <div class="bg-blue-600 text-white p-3 rounded-lg max-w-xs ml-auto">
+                                    <i class="fab fa-whatsapp mr-2"></i> Click here to submit your quote
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-4 -right-4 bg-accent w-24 h-24 rounded-full opacity-20"></div>
+                    <div class="absolute -bottom-4 -left-4 bg-accent w-32 h-32 rounded-full opacity-20"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powerful Features for Modern Procurement</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    SourceSync provides everything you need to manage your procurement workflow efficiently and effectively.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">WhatsApp Integration</h3>
+                    <p class="text-gray-600">
+                        Send enquiries directly to suppliers via WhatsApp with custom links that track responses and quotes automatically.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-table text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Smart Comparison</h3>
+                    <p class="text-gray-600">
+                        Automatically organize and compare supplier quotes in an intuitive table view with real-time updates.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-users text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Supplier Management</h3>
+                    <p class="text-gray-600">
+                        Maintain a comprehensive supplier database with ratings, historical performance, and contact information.
+                    </p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-bell text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Real-time Notifications</h3>
+                    <p class="text-gray-600">
+                        Get instant alerts when suppliers respond, submit quotes, or when deadlines are approaching.
+                    </p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Analytics Dashboard</h3>
+                    <p class="text-gray-600">
+                        Track procurement metrics, spending patterns, and supplier performance with comprehensive analytics.
+                    </p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                    <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Secure & Compliant</h3>
+                    <p class="text-gray-600">
+                        Enterprise-grade security with data encryption and compliance with procurement regulations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How SourceSync Works</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Simplify your procurement process in just three easy steps
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 border-4 border-primary">
+                        <span class="text-2xl font-bold text-primary">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Create & Send Enquiry</h3>
+                    <p class="text-gray-600">
+                        Draft your procurement request, add specifications, and send it to multiple suppliers via WhatsApp with a custom tracking link.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 border-4 border-primary">
+                        <span class="text-2xl font-bold text-primary">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Receive & Track Quotes</h3>
+                    <p class="text-gray-600">
+                        Suppliers respond through the custom link, and all quotes are automatically collected and organized in your dashboard.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="bg-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 border-4 border-primary">
+                        <span class="text-2xl font-bold text-primary">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Compare & Award</h3>
+                    <p class="text-gray-600">
+                        Use our intelligent comparison table to evaluate quotes side-by-side and award the contract with one click.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Demo -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Smart Quote Comparison</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Make informed decisions with our intuitive comparison interface
+                </p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-6 overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th class="p-4 text-left rounded-tl-xl">Supplier</th>
+                            <th class="p-4 text-left">Product</th>
+                            <th class="p-4 text-left">Unit Price</th>
+                            <th class="p-4 text-left">Delivery Time</th>
+                            <th class="p-4 text-left">Warranty</th>
+                            <th class="p-4 text-left rounded-tr-xl">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-200 hover:bg-blue-50">
+                            <td class="p-4">
+                                <div class="flex items-center">
+                                    <div class="bg-gray-300 w-10 h-10 rounded-full mr-3"></div>
+                                    <span>Office Solutions Ltd</span>
+                                </div>
+                            </td>
+                            <td class="p-4">Ergonomic Office Chair</td>
+                            <td class="p-4 font-semibold text-green-600">$245</td>
+                            <td class="p-4">7 days</td>
+                            <td class="p-4">3 years</td>
+                            <td class="p-4">
+                                <button class="bg-green-600 text-white px-3 py-1 rounded hover:bg-green-700">
+                                    Award
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-gray-200 hover:bg-blue-50">
+                            <td class="p-4">
+                                <div class="flex items-center">
+                                    <div class="bg-gray-300 w-10 h-10 rounded-full mr-3"></div>
+                                    <span>Furnish Pro</span>
+                                </div>
+                            </td>
+                            <td class="p-4">Ergonomic Office Chair</td>
+                            <td class="p-4 font-semibold text-gray-600">$220</td>
+                            <td class="p-4">14 days</td>
+                            <td class="p-4">2 years</td>
+                            <td class="p-4">
+                                <button class="bg-gray-300 text-gray-600 px-3 py-1 rounded cursor-not-allowed">
+                                    Not Selected
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-blue-50">
+                            <td class="p-4">
+                                <div class="flex items-center">
+                                    <div class="bg-gray-300 w-10 h-10 rounded-full mr-3"></div>
+                                    <span>Comfort Seating Co</span>
+                                </div>
+                            </td>
+                            <td class="p-4">Ergonomic Office Chair</td>
+                            <td class="p-4 font-semibold text-gray-600">$265</td>
+                            <td class="p-4">5 days</td>
+                            <td class="p-4">5 years</td>
+                            <td class="p-4">
+                                <button class="bg-gray-300 text-gray-600 px-3 py-1 rounded cursor-not-allowed">
+                                    Not Selected
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the plan that fits your procurement needs
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">$0</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Up to 5 enquiries per month</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>WhatsApp integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Basic quote comparison</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times mr-2"></i>
+                            <span>Advanced analytics</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                <!-- Pro Plan -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border-2 border-primary relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">$49</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Unlimited enquiries</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Advanced WhatsApp features</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Smart quote comparison</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Analytics dashboard</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors">
+                        Start Free Trial
+                    </button>
+                </div>
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-gray-900">Custom</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom enquiry limits</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Dedicated account manager</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Advanced security features</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom integrations</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-gray-800 text-white py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
+                        Contact Sales
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Procurement Process?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Join hundreds of businesses already saving time and money with SourceSync
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-white text-primary px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
+                    Start Your Free Trial
+                </button>
+                <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-colors">
+                    Schedule a Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary w-8 h-8 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold">SS</span>
+                        </div>
+                        <span class="ml-2 text-xl font-bold">SourceSync</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Streamlining procurement through innovative WhatsApp integration and smart comparison tools.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Features</a></li>
+                        <li><a href="#" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i> info@sourcesync.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 SourceSync. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
