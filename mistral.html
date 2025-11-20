@@ -3,151 +3,354 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SourceSync | Streamline Your Procurement Process</title>
+    <title>SourceSync | Revolutionize Your Procurement Process</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
         body {
             line-height: 1.6;
-            color: #333;
+            color: var(--dark);
+            background: #f9f9f9;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
+        /* Header */
         header {
-            background: #2c3e50;
+            background: var(--dark);
             color: #fff;
             padding: 20px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            box-shadow: var(--shadow);
         }
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
         }
+
         .nav-links a {
             color: #fff;
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: var(--transition);
         }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: #fff;
+            padding: 150px 0 100px;
             text-align: center;
-            padding-top: 80px;
+            position: relative;
+            overflow: hidden;
         }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
         .hero h1 {
-            font-size: 48px;
+            font-size: 3.5rem;
             margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
         }
+
         .hero p {
-            font-size: 20px;
+            font-size: 1.3rem;
             margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease;
         }
+
         .btn {
             display: inline-block;
-            background: #3498db;
+            background: var(--accent);
             color: #fff;
-            padding: 12px 30px;
+            padding: 15px 35px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            animation: fadeIn 1.5s ease;
         }
+
+        .btn:hover {
+            background: #c0392b;
+            transform: translateY(-3px);
+        }
+
+        /* Features Section */
         .features {
-            padding: 80px 0;
-            background: #f9f9f9;
+            padding: 100px 0;
+            background: #fff;
         }
+
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .feature-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .feature-card h3 {
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
             margin-bottom: 15px;
         }
-        .how-it-works {
-            padding: 80px 0;
+
+        .section-title p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
         }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 100px 0;
+            background: var(--light);
+        }
+
         .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
+
         .step {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
             text-align: center;
-            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
-        .step img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 5px;
+
+        .step:hover {
+            transform: translateY(-10px);
         }
+
+        .step-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials Section */
         .testimonials {
-            background: #f9f9f9;
-            padding: 80px 0;
+            padding: 100px 0;
+            background: #fff;
         }
+
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
+
         .testimonial {
-            background: #fff;
+            background: var(--light);
             padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            box-shadow: var(--shadow);
         }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* CTA Section */
         .cta {
-            background: #2c3e50;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: #fff;
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            opacity: 0.2;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
         .cta h2 {
+            font-size: 2.5rem;
             margin-bottom: 30px;
         }
+
+        /* Footer */
         footer {
-            background: #1a252f;
+            background: var(--dark);
             color: #fff;
             padding: 30px 0;
             text-align: center;
         }
+
+        .social-links {
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 36px;
+                font-size: 2.5rem;
             }
+
             .hero p {
-                font-size: 18px;
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                display: none;
             }
         }
     </style>
@@ -169,37 +372,60 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Streamline Your Procurement Process</h1>
-            <p>Manage suppliers, send enquiries via WhatsApp, and compare quotes—all in one platform.</p>
-            <a href="#signup" class="btn">Get Started</a>
+            <div class="hero-content">
+                <h1>Revolutionize Your Procurement Process</h1>
+                <p>Manage suppliers, send enquiries via WhatsApp, and compare quotes—all in one powerful platform.</p>
+                <a href="#signup" class="btn">Get Started For Free</a>
+            </div>
         </div>
     </section>
 
     <section id="features" class="features">
         <div class="container">
-            <h2 class="section-title">Key Features</h2>
+            <div class="section-title">
+                <h2>Powerful Features</h2>
+                <p>Everything you need to streamline your procurement process</p>
+            </div>
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
                     <h3>Supplier Management</h3>
-                    <p>Easily add, organize, and manage your suppliers in one centralized dashboard.</p>
+                    <p>Easily add, organize, and manage all your suppliers in one centralized dashboard.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
                     <h3>WhatsApp Enquiries</h3>
-                    <p>Send procurement enquiries directly to suppliers via WhatsApp with a single click.</p>
+                    <p>Send procurement enquiries directly to suppliers via WhatsApp with just one click.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
                     <h3>Quote Comparison</h3>
-                    <p>Compare supplier quotes side-by-side to make informed purchasing decisions.</p>
+                    <p>Compare all supplier quotes side-by-side in a clear, easy-to-read table.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
                     <h3>Custom Links</h3>
                     <p>Generate unique links for suppliers to respond and quote, ensuring seamless communication.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
                     <h3>Real-Time Notifications</h3>
                     <p>Get instant notifications when suppliers respond or update their quotes.</p>
                 </div>
                 <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3>Analytics Dashboard</h3>
                     <p>Track your procurement activities and supplier performance with detailed analytics.</p>
                 </div>
@@ -209,25 +435,36 @@
 
     <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Simple steps to transform your procurement process</p>
+            </div>
             <div class="steps">
                 <div class="step">
-                    <img src="https://via.placeholder.com/300x200" alt="Step 1">
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
                     <h3>Add Suppliers</h3>
                     <p>Upload or manually add your supplier details to your SourceSync account.</p>
                 </div>
                 <div class="step">
-                    <img src="https://via.placeholder.com/300x200" alt="Step 2">
+                    <div class="step-icon">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
                     <h3>Send Enquiries</h3>
                     <p>Create and send procurement enquiries to suppliers via WhatsApp.</p>
                 </div>
                 <div class="step">
-                    <img src="https://via.placeholder.com/300x200" alt="Step 3">
+                    <div class="step-icon">
+                        <i class="fas fa-reply"></i>
+                    </div>
                     <h3>Receive Quotes</h3>
                     <p>Suppliers respond and quote through the custom link provided.</p>
                 </div>
                 <div class="step">
-                    <img src="https://via.placeholder.com/300x200" alt="Step 4">
+                    <div class="step-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
                     <h3>Compare & Decide</h3>
                     <p>Compare all quotes in a single table and choose the best offer.</p>
                 </div>
@@ -237,19 +474,22 @@
 
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2 class="section-title">What Our Users Say</h2>
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Hear from businesses that have transformed their procurement with SourceSync</p>
+            </div>
             <div class="testimonial-grid">
                 <div class="testimonial">
-                    <p>"SourceSync has transformed our procurement process. Sending enquiries via WhatsApp and comparing quotes is a game-changer!"</p>
-                    <h4>- John Doe, Procurement Manager</h4>
+                    <p class="testimonial-text">"SourceSync has transformed our procurement process. Sending enquiries via WhatsApp and comparing quotes is a game-changer!"</p>
+                    <p class="testimonial-author">- John Doe, Procurement Manager</p>
                 </div>
                 <div class="testimonial">
-                    <p>"The platform is intuitive and saves us hours every week. Highly recommend it to any business dealing with multiple suppliers."</p>
-                    <h4>- Jane Smith, Operations Director</h4>
+                    <p class="testimonial-text">"The platform is intuitive and saves us hours every week. Highly recommend it to any business dealing with multiple suppliers."</p>
+                    <p class="testimonial-author">- Jane Smith, Operations Director</p>
                 </div>
                 <div class="testimonial">
-                    <p>"Real-time notifications and the analytics dashboard help us stay on top of our procurement activities effortlessly."</p>
-                    <h4>- Alex Lee, Supply Chain Coordinator</h4>
+                    <p class="testimonial-text">"Real-time notifications and the analytics dashboard help us stay on top of our procurement activities effortlessly."</p>
+                    <p class="testimonial-author">- Alex Lee, Supply Chain Coordinator</p>
                 </div>
             </div>
         </div>
@@ -257,13 +497,22 @@
 
     <section id="contact" class="cta">
         <div class="container">
-            <h2>Ready to Simplify Your Procurement?</h2>
-            <a href="#signup" class="btn">Sign Up Now</a>
+            <div class="cta-content">
+                <h2>Ready to Simplify Your Procurement?</h2>
+                <a href="#signup" class="btn">Start Your Free Trial</a>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
+            <div class="logo" style="color: #fff; margin-bottom: 20px;">SourceSync</div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
             <p>&copy; 2025 SourceSync. All rights reserved.</p>
         </div>
     </footer>
