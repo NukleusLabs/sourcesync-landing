@@ -13,6 +13,46 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                200: "#bfdbfe",
+                300: "#93c5fd",
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                800: "#1e40af",
+                900: "#1e3a8a",
+              },
+              gradient: {
+                start: "#2563eb",
+                end: "#7c3aed",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Space Grotesk", "sans-serif"],
+            },
+            animation: {
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-20px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
@@ -234,7 +274,7 @@
                   class="bg-gradient-to-r from-purple-600 to-pink-600 p-6 rounded-xl text-white text-center"
                 >
                   <p class="text-sm opacity-90">Best Quote</p>
-                  <p class="text-4xl font-black">$18,720</p>
+                  <p class="text-4xl font-black">RM18,720</p>
                   <p class="text-lg opacity-90">Save 24% vs average</p>
                 </div>
               </div>
@@ -614,127 +654,334 @@
       </div>
     </section>
 
-    <!-- How It Works -->
-    <section id="how-it-works" class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-          <p class="text-xl text-gray-600">
-            Get started in minutes with our simple 4-step process
+    <!-- How It Works Section -->
+    <section
+      id="how-it-works"
+      class="py-20 bg-gradient-to-br from-gray-50 to-primary-50 relative"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h2 class="text-5xl font-bold text-gray-900 mb-6 font-heading">
+            How <span class="gradient-text">SourceSync</span> Works
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Transform your procurement process in just three simple steps
           </p>
         </div>
-
-        <div class="grid md:grid-cols-4 gap-8 relative">
-          <div
-            class="hidden md:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-purple-200 via-blue-200 to-pink-200 z-0"
-          ></div>
-
-          <div class="relative z-10">
-            <div
-              class="bg-white p-8 rounded-2xl shadow-lg hover-lift text-center"
-            >
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <!-- Step 1 -->
+          <div class="text-center group">
+            <div class="relative inline-block mb-8">
               <div
-                class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold"
+                class="absolute inset-0 bg-gradient-to-r from-primary-600 to-purple-600 rounded-full w-24 h-24 blur-xl opacity-30 group-hover:opacity-50 transition-opacity"
+              ></div>
+              <div
+                class="relative bg-white rounded-full w-24 h-24 flex items-center justify-center border-4 border-primary-600 z-10"
               >
-                1
+                <span class="text-3xl font-bold text-primary-600">1</span>
               </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Add Suppliers
-              </h3>
-              <p class="text-gray-600">
-                Import or manually add your supplier contacts with their
-                WhatsApp numbers.
-              </p>
             </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Create & Send Enquiry
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Draft your procurement request with specifications, quantities,
+              and deadlines. Send to multiple suppliers via WhatsApp with custom
+              tracking links.
+            </p>
+            <div
+              class="mt-6 w-16 h-1 bg-gradient-to-r from-primary-600 to-purple-600 mx-auto rounded-full"
+            ></div>
           </div>
-
-          <div class="relative z-10">
-            <div
-              class="bg-white p-8 rounded-2xl shadow-lg hover-lift text-center"
-            >
+          <!-- Step 2 -->
+          <div class="text-center group">
+            <div class="relative inline-block mb-8">
               <div
-                class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold"
+                class="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full w-24 h-24 blur-xl opacity-30 group-hover:opacity-50 transition-opacity"
+              ></div>
+              <div
+                class="relative bg-white rounded-full w-24 h-24 flex items-center justify-center border-4 border-purple-600 z-10"
               >
-                2
+                <span class="text-3xl font-bold text-purple-600">2</span>
               </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Create Enquiry
-              </h3>
-              <p class="text-gray-600">
-                Draft your RFQ with specifications, quantities, and
-                requirements.
-              </p>
             </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Receive & Track Quotes
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Suppliers respond through the custom link, and all quotes are
+              automatically collected, validated, and organized in your
+              intelligent dashboard.
+            </p>
+            <div
+              class="mt-6 w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"
+            ></div>
           </div>
-
-          <div class="relative z-10">
-            <div
-              class="bg-white p-8 rounded-2xl shadow-lg hover-lift text-center"
-            >
+          <!-- Step 3 -->
+          <div class="text-center group">
+            <div class="relative inline-block mb-8">
               <div
-                class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold"
+                class="absolute inset-0 bg-gradient-to-r from-pink-600 to-rose-600 rounded-full w-24 h-24 blur-xl opacity-30 group-hover:opacity-50 transition-opacity"
+              ></div>
+              <div
+                class="relative bg-white rounded-full w-24 h-24 flex items-center justify-center border-4 border-pink-600 z-10"
               >
-                3
+                <span class="text-3xl font-bold text-pink-600">3</span>
               </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Send via WhatsApp
-              </h3>
-              <p class="text-gray-600">
-                Suppliers receive your enquiry with a custom link to submit
-                quotes.
-              </p>
             </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Compare & Award
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Use our AI-powered comparison table to evaluate quotes
+              side-by-side, negotiate terms, and award contracts with one click.
+            </p>
+            <div
+              class="mt-6 w-16 h-1 bg-gradient-to-r from-pink-600 to-rose-600 mx-auto rounded-full"
+            ></div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="relative z-10">
-            <div
-              class="bg-white p-8 rounded-2xl shadow-lg hover-lift text-center"
+    <!-- Comparison Table Demo -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h2 class="text-5xl font-bold text-gray-900 mb-6 font-heading">
+            Intelligent Quote <span class="gradient-text">Comparison</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Make data-driven decisions with our advanced comparison interface
+          </p>
+        </div>
+        <div
+          class="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 border border-gray-200 shadow-xl"
+        >
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead>
+                <tr
+                  class="bg-gradient-to-r from-primary-600 to-purple-600 text-white rounded-t-2xl"
+                >
+                  <th class="p-6 text-left rounded-tl-2xl font-semibold">
+                    Supplier
+                  </th>
+                  <th class="p-6 text-left font-semibold">Product Details</th>
+                  <th class="p-6 text-left font-semibold">Unit Price</th>
+                  <th class="p-6 text-left font-semibold">Total Cost</th>
+                  <th class="p-6 text-left font-semibold">Delivery</th>
+                  <th class="p-6 text-left font-semibold">Rating</th>
+                  <th class="p-6 text-left rounded-tr-2xl font-semibold">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  class="border-b border-gray-200 hover:bg-primary-50 transition-colors"
+                >
+                  <td class="p-6">
+                    <div class="flex items-center">
+                      <div
+                        class="bg-gradient-to-r from-blue-400 to-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold mr-4"
+                      >
+                        OS
+                      </div>
+                      <div>
+                        <div class="font-bold text-gray-900">
+                          Office Solutions Ltd
+                        </div>
+                        <div class="text-sm text-gray-500">
+                          Premium Supplier
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <div class="font-medium">Ergonomic Office Chair Pro</div>
+                    <div class="text-sm text-gray-500">
+                      5-year warranty, adjustable lumbar
+                    </div>
+                  </td>
+                  <td class="p-6 font-bold text-green-600 text-lg">$245</td>
+                  <td class="p-6 font-bold text-gray-900">$12,250</td>
+                  <td class="p-6">
+                    <div
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      7 days
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <div class="flex items-center">
+                      <div class="text-yellow-400 mr-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <span class="text-sm text-gray-600 ml-1">4.8</span>
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <button
+                      class="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-all"
+                    >
+                      <i class="fas fa-trophy mr-2"></i> Award
+                    </button>
+                  </td>
+                </tr>
+                <tr
+                  class="border-b border-gray-200 hover:bg-purple-50 transition-colors"
+                >
+                  <td class="p-6">
+                    <div class="flex items-center">
+                      <div
+                        class="bg-gradient-to-r from-purple-400 to-purple-600 w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold mr-4"
+                      >
+                        FP
+                      </div>
+                      <div>
+                        <div class="font-bold text-gray-900">Furnish Pro</div>
+                        <div class="text-sm text-gray-500">
+                          Standard Supplier
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <div class="font-medium">Ergonomic Office Chair</div>
+                    <div class="text-sm text-gray-500">
+                      2-year warranty, basic features
+                    </div>
+                  </td>
+                  <td class="p-6 font-bold text-gray-600 text-lg">$220</td>
+                  <td class="p-6 font-bold text-gray-900">$11,000</td>
+                  <td class="p-6">
+                    <div
+                      class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      14 days
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <div class="flex items-center">
+                      <div class="text-yellow-400 mr-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <span class="text-sm text-gray-600 ml-1">4.2</span>
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <button
+                      class="bg-gray-200 text-gray-600 px-4 py-2 rounded-xl font-semibold hover:bg-gray-300 transition-colors"
+                    >
+                      Compare
+                    </button>
+                  </td>
+                </tr>
+                <tr class="hover:bg-pink-50 transition-colors">
+                  <td class="p-6">
+                    <div class="flex items-center">
+                      <div
+                        class="bg-gradient-to-r from-pink-400 to-pink-600 w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold mr-4"
+                      >
+                        CSC
+                      </div>
+                      <div>
+                        <div class="font-bold text-gray-900">
+                          Comfort Seating Co
+                        </div>
+                        <div class="text-sm text-gray-500">
+                          Premium Supplier
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <div class="font-medium">Ultra Ergonomic Chair</div>
+                    <div class="text-sm text-gray-500">
+                      5-year warranty, premium materials
+                    </div>
+                  </td>
+                  <td class="p-6 font-bold text-gray-600 text-lg">$265</td>
+                  <td class="p-6 font-bold text-gray-900">$13,250</td>
+                  <td class="p-6">
+                    <div
+                      class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"
+                    >
+                      5 days
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <div class="flex items-center">
+                      <div class="text-yellow-400 mr-1">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <span class="text-sm text-gray-600 ml-1">4.9</span>
+                    </div>
+                  </td>
+                  <td class="p-6">
+                    <button
+                      class="bg-gray-200 text-gray-600 px-4 py-2 rounded-xl font-semibold hover:bg-gray-300 transition-colors"
+                    >
+                      Compare
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mt-8 text-center">
+            <button
+              class="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 transition-colors"
             >
-              <div
-                class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold"
-              >
-                4
-              </div>
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                Compare & Choose
-              </h3>
-              <p class="text-gray-600">
-                Review all quotations side-by-side and select the best option.
-              </p>
-            </div>
+              View detailed analysis <i class="fas fa-arrow-right ml-2"></i>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Social Proof -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-gradient-to-r from-primary-600 to-purple-600">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">
-            Trusted by Procurement Teams Worldwide
+          <h2 class="text-5xl font-bold text-white mb-6 font-heading">
+            Trusted by
+            <span class="text-yellow-300">Procurement Teams </span>Worldwide
           </h2>
-          <p class="text-xl text-gray-600">
+          <p class="text-xl text-white/90 max-w-3xl mx-auto">
             Join thousands of companies saving time and money
           </p>
         </div>
 
         <div class="grid md:grid-cols-4 gap-8 mb-16">
           <div class="text-center">
-            <div class="text-5xl font-bold gradient-text mb-2">15K+</div>
-            <div class="text-gray-600">Active Users</div>
+            <div class="text-5xl font-bold text-yellow-300 mb-2">15K+</div>
+            <div class="text-white">Active Users</div>
           </div>
           <div class="text-center">
-            <div class="text-5xl font-bold gradient-text mb-2">$2.4M</div>
-            <div class="text-gray-600">Cost Savings</div>
+            <div class="text-5xl font-bold text-yellow-300 mb-2">$2.4M</div>
+            <div class="text-white">Cost Savings</div>
           </div>
           <div class="text-center">
-            <div class="text-5xl font-bold gradient-text mb-2">98%</div>
-            <div class="text-gray-600">Response Rate</div>
+            <div class="text-5xl font-bold text-yellow-300 mb-2">98%</div>
+            <div class="text-white">Response Rate</div>
           </div>
           <div class="text-center">
-            <div class="text-5xl font-bold gradient-text mb-2">4.9★</div>
-            <div class="text-gray-600">User Rating</div>
+            <div class="text-5xl font-bold text-yellow-300 mb-2">4.9★</div>
+            <div class="text-white">User Rating</div>
           </div>
         </div>
 
@@ -937,192 +1184,132 @@
 
     <!-- Pricing Section -->
     <section id="pricing" class="py-20 bg-gray-50">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-900 mb-4">
-            Simple, Transparent Pricing
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <h2 class="text-5xl font-bold text-gray-900 mb-6 font-heading">
+            Simple, Transparent <span class="gradient-text">Pricing</span>
           </h2>
-          <p class="text-xl text-gray-600">
-            Choose the plan that fits your needs
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Choose the perfect plan for your procurement needs
           </p>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-2xl shadow-lg hover-lift">
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-            <div class="mb-6">
-              <span class="text-5xl font-bold text-gray-900">$49</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Basic Plan -->
+          <div
+            class="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+            <div class="text-gray-600 mb-6">Perfect for small teams</div>
+            <div class="mb-8">
+              <span class="text-5xl font-bold text-gray-900">$0</span>
               <span class="text-gray-600">/month</span>
             </div>
             <ul class="space-y-4 mb-8">
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">Up to 50 suppliers</span>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Up to 5 enquiries per month</span>
               </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">100 enquiries/month</span>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Basic WhatsApp integration</span>
               </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">WhatsApp integration</span>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Simple quote comparison</span>
               </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">Comparison dashboard</span>
+              <li class="flex items-center text-gray-400">
+                <i class="fas fa-times mr-3"></i>
+                <span>Advanced analytics</span>
               </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">Email support</span>
+              <li class="flex items-center text-gray-400">
+                <i class="fas fa-times mr-3"></i>
+                <span>Supplier management</span>
               </li>
             </ul>
             <button
-              class="w-full bg-gray-200 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-300 transition"
+              class="w-full bg-gray-100 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-200 transition-colors"
             >
               Get Started
             </button>
           </div>
-
+          <!-- Pro Plan -->
           <div
-            class="bg-white p-8 rounded-2xl shadow-2xl hover-lift border-4 border-purple-500 relative transform scale-105"
+            class="bg-gradient-to-b from-white to-primary-50 rounded-3xl p-8 border-2 border-primary-600 relative hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
-            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <span
-                class="gradient-bg text-white px-4 py-1 rounded-full text-sm font-semibold"
-                >MOST POPULAR</span
-              >
+            <div
+              class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg"
+            >
+              Most Popular
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
-            <div class="mb-6">
-              <span class="text-5xl font-bold gradient-text">$149</span>
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Professional</h3>
+            <div class="text-gray-600 mb-6">For growing businesses</div>
+            <div class="mb-8">
+              <span class="text-5xl font-bold text-gray-900">$49</span>
               <span class="text-gray-600">/month</span>
             </div>
             <ul class="space-y-4 mb-8">
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">Unlimited suppliers</span>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Unlimited enquiries</span>
               </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">Unlimited enquiries</span>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Advanced WhatsApp features</span>
               </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">Priority WhatsApp support</span>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>AI-powered quote comparison</span>
               </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">Advanced analytics</span>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Complete supplier management</span>
               </li>
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-                <span class="text-gray-700">Dedicated account manager</span>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Procurement analytics dashboard</span>
               </li>
             </ul>
             <button
-              class="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold hover:bg-purple-600 transition"
+              class="w-full bg-gradient-to-r from-primary-600 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
             >
-              Get Started
+              Start Free Trial
+            </button>
+          </div>
+          <!-- Enterprise Plan -->
+          <div
+            class="bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          >
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+            <div class="text-gray-600 mb-6">For large organizations</div>
+            <div class="mb-8">
+              <span class="text-5xl font-bold text-gray-900">Custom</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Custom enquiry limits</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Dedicated account manager</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Advanced security & compliance</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Custom integrations & API access</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-green-500 mr-3"></i>
+                <span>Multi-team collaboration</span>
+              </li>
+            </ul>
+            <button
+              class="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold hover:bg-black transition-colors"
+            >
+              Contact Sales
             </button>
           </div>
         </div>
@@ -1138,16 +1325,18 @@
         <p class="text-2xl mb-12 opacity-90">
           Join 15,000+ buyers already closing deals faster with SourceSync
         </p>
-        <div class="flex flex-col sm:flex-row gap-6 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Enter your work email"
-            class="px-8 py-5 rounded-xl text-gray-900 text-lg font-medium"
-          />
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
           <button
-            class="bg-white text-purple-700 px-10 py-5 rounded-xl font-black text-xl hover:scale-105 transition shadow-2xl"
+            class="bg-white text-primary-600 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-gray-100 hover:scale-105 hover:shadow-2xl transition-all transform"
           >
-            Start Free Trial
+            Start Your Free Trial
+          </button>
+          <button
+            class="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/30 hover:scale-105 transition-all transform"
+          >
+            Schedule a Demo
           </button>
         </div>
         <p class="mt-6 text-lg opacity-80">
